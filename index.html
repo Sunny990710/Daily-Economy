@@ -4,18 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="theme-color" content="#F2F2F7" />
-<meta name="description" content="하루 한 단어씩, 경제·금융 용어를 사회초년생 눈높이로 쉽게." />
 <title>오늘의 경제 한 단어</title>
-<style>html,body,#root{height:100%;margin:0}body{background:#E7E7EC}</style>
+<style>html,body,#root{margin:0}body{background:#E7E7EC}</style>
 </head>
 <body>
 <div id="root"></div>
-<script>
-window.addEventListener("error", function(e){
-  var r = document.getElementById("root");
-  if (r && !r.childNodes.length) r.innerHTML = '<pre style="padding:18px;white-space:pre-wrap;font:14px/1.6 -apple-system,sans-serif;color:#b00020">앱 실행 오류:\n' + ((e.error && e.error.stack) || e.message || e) + '</pre>';
-});
-</script>
+<script>window.addEventListener("error",function(e){var r=document.getElementById("root");if(r&&!r.childNodes.length)r.innerHTML='<pre style="padding:18px;white-space:pre-wrap;font:14px/1.6 -apple-system,sans-serif;color:#b00020">앱 실행 오류:\n'+((e.error&&e.error.stack)||e.message||e)+'</pre>';});</script>
 <script>/**
  * @license React
  * react.production.min.js
@@ -350,11 +344,11 @@ const CSS = `
   --shadow:0 1px 1px rgba(0,0,0,.03), 0 6px 20px rgba(17,24,39,.07);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
-.wrap{min-height:100vh;display:flex;justify-content:center;background:radial-gradient(120% 80% at 50% 0%,#F0F0F4 0%,#E7E7EC 100%)}
-.app{width:100%;max-width:440px;min-height:100vh;background:var(--bg);position:relative;display:flex;flex-direction:column;overflow:hidden;
+.wrap{min-height:100vh;display:flex;justify-content:center;align-items:flex-start;overflow-x:hidden;background:radial-gradient(120% 80% at 50% 0%,#F0F0F4 0%,#E7E7EC 100%)}
+.app{width:100%;max-width:440px;background:var(--bg);position:relative;display:flex;flex-direction:column;
   font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);box-shadow:0 0 60px rgba(0,0,0,.08)}
 .app, .app *{font-family:inherit}
-main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:0 18px 120px}
+main{padding:0 18px 16px}
 ::-webkit-scrollbar{width:0}
 .lt{padding:54px 4px 8px;animation:fade .5s ease both}
 .lt .eyebrow{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.2px;display:flex;align-items:center;gap:5px}
@@ -414,10 +408,10 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;p
 .chev{color:#C5C5CC;flex-shrink:0}
 .count{font-size:13px;color:var(--sub);font-weight:600;margin:16px 4px 0;text-align:center}
 .empty{text-align:center;color:var(--sub);font-size:15px;font-weight:500;padding:60px 0}
-.tabs{position:absolute;left:0;right:0;bottom:0;display:flex;background:rgba(248,248,250,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--hair);padding:9px 0 26px;z-index:30}
+.tabs{position:sticky;bottom:0;display:flex;background:rgba(248,248,250,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--hair);padding:9px 0 26px;z-index:30}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;color:var(--sub);font-size:10.5px;font-weight:700;transition:.15s}
 .tab.on{color:var(--accent)} .tab:active{transform:scale(.92)}
-.detail{position:absolute;inset:0;background:var(--bg);z-index:40;display:flex;flex-direction:column;animation:slidein .34s cubic-bezier(.2,.75,.2,1) both}
+.detail{position:fixed;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:var(--bg);z-index:40;display:flex;flex-direction:column;animation:fade .28s ease both}
 .dnav{position:sticky;top:0;display:flex;align-items:center;padding:14px 12px;background:rgba(242,242,247,.8);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--hair);z-index:5}
 .dnav button{display:flex;align-items:center;gap:1px;border:none;background:none;color:var(--accent);font-size:16px;font-weight:600;cursor:pointer;padding:6px 8px;border-radius:10px}
 .dnav .dttl{font-size:16px;font-weight:700;flex:1;text-align:center;margin-right:54px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
